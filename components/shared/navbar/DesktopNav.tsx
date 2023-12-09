@@ -7,31 +7,34 @@ import { useEffect, useState } from "react";
 
 export default function DesktopNav() {
   const [activeSection, setActiveSection] = useState<string | null>(() => {
-    // Get the active section from localStorage on component mount
-    const storedActiveSection = localStorage.getItem("activeSection");
-    return storedActiveSection ? JSON.parse(storedActiveSection) : null;
+    if (typeof window !== "undefined") {
+      const storedActiveSection = localStorage.getItem("activeSection");
+      return storedActiveSection ? JSON.parse(storedActiveSection) : null;
+    }
   });
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = sidebarLinks.map((item) =>
-        document.getElementById(item.sectionId)
-      );
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      if (typeof window !== "undefined") {
+        const sections = sidebarLinks.map((item) =>
+          document.getElementById(item.sectionId)
+        );
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          const newActiveSection = sidebarLinks[i].sectionId;
-          setActiveSection(newActiveSection);
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i];
+          if (section && section.offsetTop <= scrollPosition) {
+            const newActiveSection = sidebarLinks[i].sectionId;
+            setActiveSection(newActiveSection);
 
-          // Store the active section in localStorage
-          localStorage.setItem(
-            "activeSection",
-            JSON.stringify(newActiveSection)
-          );
+            // Store the active section in localStorage
+            localStorage.setItem(
+              "activeSection",
+              JSON.stringify(newActiveSection)
+            );
 
-          break;
+            break;
+          }
         }
       }
     };

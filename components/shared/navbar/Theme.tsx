@@ -17,7 +17,7 @@ function Theme() {
   return (
     <Menubar className="relative border-none bg-transparent shadow-none">
       <MenubarMenu>
-        <MenubarTrigger className="focus:bg-light-900 data-[state=open]:bg-light-900 dark:bg-dark-200 dark:data-[state=open]:bg-dark-200 cursor-pointer">
+        <MenubarTrigger className="cursor-pointer focus:bg-light-900 data-[state=open]:bg-light-900 dark:bg-dark-200 dark:data-[state=open]:bg-dark-200">
           {mode === "light" ? (
             <Image
               src="/assets/icons/sun.svg"
