@@ -99,7 +99,7 @@ function MobileNav() {
           src="/assets/icons/hamburger.svg"
           width={36}
           height={36}
-          className="invert-colors lg:hidden cursor-pointer"
+          className="invert-colors cursor-pointer lg:hidden"
         />
       </SheetTrigger>
       <SheetContent
