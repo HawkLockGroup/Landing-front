@@ -9,27 +9,27 @@ export const themes = [
 export const sidebarLinks: SidebarLink[] = [
   {
     imgURL: "/assets/icons/home.svg",
-    route: "/",
+    sectionId: "home",
     label: "Home",
   },
   {
     imgURL: "/assets/icons/work.svg",
-    route: "",
+    sectionId: "howItWorks",
     label: "How it works",
   },
   {
     imgURL: "/assets/icons/star.svg",
-    route: "",
+    sectionId: "features",
     label: "Features",
   },
   {
     imgURL: "/assets/icons/token.svg",
-    route: "/jobs",
+    sectionId: "token",
     label: "Token",
   },
   {
     imgURL: "/assets/icons/document.svg",
-    route: "",
+    sectionId: "docs",
     label: "Docs",
   },
 ];
