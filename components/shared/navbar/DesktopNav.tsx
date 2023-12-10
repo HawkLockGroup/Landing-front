@@ -7,7 +7,10 @@ import { useEffect, useState } from "react";
 export default function DesktopNav() {
   const [activeSection, setActiveSection] = useState<string | null>(() => {
     // Get the active section from localStorage on component mount
-    const storedActiveSection = localStorage.getItem("activeSection");
+    const storedActiveSection =
+      typeof window !== "undefined"
+        ? localStorage.getItem("activeSection")
+        : null;
     return storedActiveSection ? JSON.parse(storedActiveSection) : null;
   });
   const handleScroll = () => {
@@ -22,9 +25,12 @@ export default function DesktopNav() {
         const newActiveSection = sidebarLinks[i].sectionId;
         setActiveSection(newActiveSection);
 
-        // Store the active section in localStorage
-        localStorage.setItem("activeSection", JSON.stringify(newActiveSection));
-
+        if (typeof window !== "undefined") {
+          localStorage.setItem(
+            "activeSection",
+            JSON.stringify(newActiveSection)
+          );
+        }
         break;
       }
     }
