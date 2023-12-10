@@ -7,40 +7,31 @@ import { useEffect, useState } from "react";
 
 export default function DesktopNav() {
   const [activeSection, setActiveSection] = useState<string | null>(() => {
-    if (typeof window !== "undefined") {
-      const storedActiveSection = localStorage.getItem("activeSection");
-      return storedActiveSection ? JSON.parse(storedActiveSection) : null;
-    }
+    // Get the active section from localStorage on component mount
+    const storedActiveSection = localStorage.getItem("activeSection");
+    return storedActiveSection ? JSON.parse(storedActiveSection) : null;
   });
+  const handleScroll = () => {
+    const sections = sidebarLinks.map((item) =>
+      document.getElementById(item.sectionId)
+    );
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window !== "undefined") {
-        const sections = sidebarLinks.map((item) =>
-          document.getElementById(item.sectionId)
-        );
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      if (section && section.offsetTop <= scrollPosition) {
+        const newActiveSection = sidebarLinks[i].sectionId;
+        setActiveSection(newActiveSection);
 
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const section = sections[i];
-          if (section && section.offsetTop <= scrollPosition) {
-            const newActiveSection = sidebarLinks[i].sectionId;
-            setActiveSection(newActiveSection);
+        // Store the active section in localStorage
+        localStorage.setItem("activeSection", JSON.stringify(newActiveSection));
 
-            // Store the active section in localStorage
-            localStorage.setItem(
-              "activeSection",
-              JSON.stringify(newActiveSection)
-            );
-
-            break;
-          }
-        }
+        break;
       }
-    };
-
+    }
+  };
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -55,7 +46,7 @@ export default function DesktopNav() {
 
   return (
     <div className="background-light900_dark200 hidden border-none lg:flex lg:flex-1">
-      <section className="flex w-full flex-row items-center justify-between">
+      <section className="flex w-full flex-row items-center justify-between xl:justify-center xl:gap-12">
         {sidebarLinks.map((item) => {
           const isActive = activeSection === item.sectionId;
 
@@ -83,11 +74,11 @@ export default function DesktopNav() {
             </div>
           );
         })}
-        <Link href="/" className="">
+        <a href="/">
           <Button className="small-medium btn-secondary primary-gradient min-h-[41px] justify-center rounded-lg px-4 py-3 text-light-900 shadow-none">
             Go To App
           </Button>
-        </Link>
+        </a>
       </section>
     </div>
   );
