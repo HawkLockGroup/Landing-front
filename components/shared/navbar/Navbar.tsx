@@ -1,13 +1,18 @@
 "use client";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Theme from "./Theme";
 import MobileNav from "./MobileNav";
-import DesktopNav from "./DesktopNav";
 import Banner from "./Banner";
-import { useEffect, useState } from "react";
 
 function Navbar() {
+  const DesktopNavRenderClient = dynamic(
+    () => import("@/components/shared/navbar/DesktopNav"),
+    { ssr: false }
+  );
+
   const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
@@ -28,12 +33,10 @@ function Navbar() {
   return (
     <>
       {!showNavbar && <Banner />}
-      {/* // HTML5 nav semantic tag */}
       <nav
         className={`background-light900_dark200 fixed z-50 flex w-full flex-row items-center justify-between gap-5 bg-light-900 p-6 shadow-light-300 transition-all duration-500 dark:shadow-none sm:px-12 lg:justify-normal ${
           showNavbar ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
-        // className="background-light900_dark200 fixed z-50 flex w-full flex-row justify-between gap-5 p-6 shadow-light-300 dark:shadow-none sm:px-12 lg:justify-normal"
       >
         {/* name&logo */}
         <Link href="/" className="flex items-center gap-1">
@@ -48,7 +51,7 @@ function Navbar() {
           </p>
         </Link>
         {/* desktop nv */}
-        <DesktopNav />
+        <DesktopNavRenderClient />
         <div className="flex-between gap-5">
           {/* theme btn */}
           <Theme />

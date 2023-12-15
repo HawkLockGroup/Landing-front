@@ -1,10 +1,10 @@
 function Banner() {
   return (
-    <div className=" flex items-center justify-center gap-6 bg-purple-700 p-3 text-center font-medium text-white">
+    <div className="relative flex items-center justify-center gap-6 bg-purple-700 p-3 text-center font-medium text-white">
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 16 16"
         height="1em"
         width="1em"

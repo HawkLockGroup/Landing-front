@@ -2,7 +2,7 @@ function HowItWorks() {
   return (
     <section
       id="howItWorks"
-      className="flex h-screen w-full items-center justify-center bg-gray-300"
+      className="flex h-screen w-full items-center justify-center"
     >
       <p>how it works</p>
     </section>

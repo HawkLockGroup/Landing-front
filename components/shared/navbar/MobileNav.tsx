@@ -122,11 +122,11 @@ function MobileNav() {
             <NavContent />
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/sign-in" className="w-full">
+            <a href="https://www.google.com/" target="_blank">
               <Button className="small-medium btn-secondary primary-gradient min-h-[41px] w-full justify-center rounded-lg px-4 py-3 text-light-900 shadow-none">
                 Go To App
               </Button>
-            </Link>
+            </a>
           </SheetClose>
         </div>
       </SheetContent>
