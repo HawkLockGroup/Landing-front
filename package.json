@@ -16,6 +16,7 @@
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "@tsparticles/all": "^3.0.2",
     "@tsparticles/basic": "^3.0.2",
+    "@tsparticles/engine": "^3.0.2",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.2",
     "class-variance-authority": "^0.7.0",

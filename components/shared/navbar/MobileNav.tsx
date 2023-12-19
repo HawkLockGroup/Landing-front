@@ -122,11 +122,15 @@ function MobileNav() {
             <NavContent />
           </SheetClose>
           <SheetClose asChild>
-            <a href="https://www.google.com/" target="_blank">
-              <Button className="small-medium btn-secondary primary-gradient min-h-[41px] w-full justify-center rounded-lg px-4 py-3 text-light-900 shadow-none">
-                Go To App
-              </Button>
-            </a>
+            <Button className=" btn-secondary primary-gradient min-h-[41px] w-full justify-center rounded-lg px-4 py-3 text-light-900 shadow-none mt-24 bg-transparent">
+              <a
+                href="https://www.google.com/"
+                target="_blank"
+                className="font-bold text-lg"
+              >
+                Discover the Future
+              </a>
+            </Button>
           </SheetClose>
         </div>
       </SheetContent>

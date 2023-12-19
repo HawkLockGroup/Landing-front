@@ -17,8 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "HawkLock",
-  description: "A community for asking and answering programming questions",
+  title: "HAWKLOCK: Pioneering the Escrow Revolution",
+  description:
+    "Embark on a journey of unbreakable security and swift decentralized trades with HAWKLOCK",
   icons: {
     icon: "/assets/images/site-logo.png",
   },

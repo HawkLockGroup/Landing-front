@@ -26,7 +26,7 @@ const Animation = () => {
           value: "#0d47a1",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 50,
       interactivity: {
         events: {
           onClick: {
@@ -41,10 +41,10 @@ const Animation = () => {
         },
         modes: {
           push: {
-            quantity: 4,
+            quantity: 10,
           },
           repulse: {
-            distance: 200,
+            distance: 300,
             duration: 0.4,
           },
         },
@@ -67,7 +67,7 @@ const Animation = () => {
             default: "bounce",
           },
           random: false,
-          speed: 6,
+          speed: 1,
           straight: false,
         },
         number: {
