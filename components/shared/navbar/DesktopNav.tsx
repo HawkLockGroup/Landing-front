@@ -81,7 +81,7 @@ const NavContent = () => {
           <a
             href="https://www.google.com/"
             target="_blank"
-            className="font-bold text-lg"
+            className="text-lg font-bold"
           >
             Discover the Future
           </a>

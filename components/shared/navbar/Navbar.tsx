@@ -34,7 +34,7 @@ function Navbar() {
     <>
       {!showNavbar && <Banner />}
       <nav
-        className={`background-light900_dark200 fixed z-50 flex w-full flex-row items-center justify-between gap-5 bg-light-900 p-6 shadow-light-300 transition-all duration-500 dark:shadow-none sm:px-12 lg:justify-normal ${
+        className={`background-light900_dark200 fixed z-50 flex w-full flex-row items-center justify-between gap-5 bg-light-900 px-2 py-1 shadow-light-300 transition-all duration-500 dark:shadow-none sm:px-12 lg:justify-normal ${
           showNavbar ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >

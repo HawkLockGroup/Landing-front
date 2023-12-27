@@ -17,7 +17,7 @@ function layout({ children }: { children: React.ReactNode }) {
         <Navbar />
       </header>
       {/* sections <main> */}
-      <main className="relative flex min-h-screen flex-1 flex-col px-6 pt-16 w-full z-10 mx-auto ">
+      <main className="relative z-10 mx-auto flex min-h-screen w-full flex-1 flex-col px-6 pt-16 lg:px-20 ">
         <Home />
         <HowItWorks />
         <Features />
