@@ -9,7 +9,7 @@ function Home() {
     >
       <div className="flex flex-col md:grid md:grid-cols-5 md:gap-4">
         {/* heading & paragraph */}
-        <div className="md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-8 md:pb-32">
+        <div className="md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-8 2xl:justify-start 2xl:gap-12  2xl:pt-72 ">
           <h1 className="home-heading">
             HAWKLOCK: Pioneering the Escrow Revolution
           </h1>

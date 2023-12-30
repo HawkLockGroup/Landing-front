@@ -7,6 +7,10 @@
     @apply h1-bold text-center md:text-start  lg:text-6xl lg:font-medium xl:text-7xl xl:font-bold;
   }
 
+  .light-border {
+    @apply rounded border-2 border-light-700 dark:border-dark-400 !important;
+  }
+
   .background-light800_dark400 {
     @apply bg-light-800 dark:bg-dark-400 bg-opacity-10;
   }
@@ -92,14 +96,6 @@
 
   .text-light400_light500 {
     @apply text-light-400 dark:text-light-500 !important;
-  }
-
-  .light-border {
-    @apply border-light-800 dark:border-dark-300;
-  }
-
-  .light-border-2 {
-    @apply border-light-700 dark:border-dark-400 !important;
   }
 
   .h1-bold {

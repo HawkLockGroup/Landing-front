@@ -4,11 +4,7 @@ export interface SidebarLink {
   label: string;
 }
 
-export interface ParamsProps {
-  params: { id: string };
-}
-
-export interface URLProps {
-  params: { id: string };
-  searchParams: { [key: string]: string | undefined };
+export interface HowItWorks {
+  heading: string;
+  paragraph: string;
 }
