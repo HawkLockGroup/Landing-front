@@ -18,7 +18,7 @@ const NavContent = () => {
       const sections = sidebarLinks.map((item) =>
         document.getElementById(item.sectionId)
       );
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -77,15 +77,6 @@ const NavContent = () => {
             </div>
           );
         })}
-        <Button className="small-medium btn-secondary primary-gradient min-h-[41px] justify-center rounded-lg px-4 py-3 text-light-900 shadow-none">
-          <a
-            href="https://www.google.com/"
-            target="_blank"
-            className="text-lg font-bold"
-          >
-            Discover the Future
-          </a>
-        </Button>
       </section>
     </div>
   );

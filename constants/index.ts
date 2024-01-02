@@ -56,3 +56,26 @@ export const howItWorks: HowItWorks[] = [
       "Charlie gives the nod, the escrow releases the payment to Alice, and the deal is done. Alice is happy with her secure payment, and Bob enjoys his new vintage watch – a perfect trade finish on HawkLock.",
   },
 ];
+
+export const features: HowItWorks[] = [
+  {
+    heading: "Robust Security",
+    paragraph:
+      "HAWKLOCK prioritizes your asset safety above all. Leveraging state-of-the-art security protocols alongside robust smart contract technology, we ensure each transaction is not only secure but also transparently conducted, providing you with a fortress of trust and reliability around the clock.",
+  },
+  {
+    heading: "Efficient Trading",
+    paragraph:
+      "Time is a valuable asset in trading, and HAWKLOCK respects this. Our platform is engineered for speed, facilitating rapid transactions without compromising clarity or accuracy. Step into a world where efficiency meets precision, ensuring your trading experience is both swift and seamless.",
+  },
+  {
+    heading: "Integrity in Arbitration",
+    paragraph:
+      "At HAWKLOCK, integrity is the cornerstone of our community-driven arbitration process. Empower your transactions by choosing from a cadre of esteemed arbiters, committed to fairness and balance. Our democratic governance model is designed to reflect the collective voice of our users, fostering a transparent and equitable trading environment.",
+  },
+  {
+    heading: "Reliable Asset Transfers",
+    paragraph:
+      "Experience the convenience of instant asset transfers with HAWKLOCK. Our system is tailored for prompt and secure exchanges, minimizing wait times and maximizing trading efficacy. The HAWKLOCK Token (HWT) anchors our ecosystem, offering a dependable and swift medium for all your transactional needs, epitomizing our commitment to a user-centric, secure trading platform.",
+  },
+];

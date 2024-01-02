@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 function Home() {
@@ -33,6 +34,16 @@ function Home() {
           className="mx-auto w-full md:col-span-3"
         />
       </div>
+
+      <button className="shadow__btn">
+        <a
+          href="https://www.google.com/"
+          target="_blank"
+          className="text-lg font-bold"
+        >
+          Discover the Future
+        </a>
+      </button>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import Features from "@/components/sections/features/Features";
+import Footer from "@/components/sections/footer/Footer";
 import Home from "@/components/sections/home/Home";
 import Animation from "@/components/shared/Animation";
 import Navbar from "@/components/shared/navbar/Navbar";
@@ -22,7 +23,9 @@ function layout({ children }: { children: React.ReactNode }) {
         <HowItWorks />
         <Features />
       </main>
-      toaster
+      {/* footer */}
+      <Footer />
+      {/* toaster */}
     </div>
   );
 }
