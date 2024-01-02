@@ -17,10 +17,10 @@ module.exports = {
     },
     extend: {
       transitionDuration: {
-        '700': '700ms',
+        "700": "700ms",
       },
       scale: {
-        '103': '1.03',
+        "103": "1.03",
       },
       colors: {
         primary: {
@@ -49,7 +49,7 @@ module.exports = {
         spaceGrotesk: ["var(--font-spaceGrotesk)"],
       },
       boxShadow: {
-        btn: "0 0 5px rgb(0,140,255), 0 0 25px rgb(0,140,255), 0 0 50px rgb(0,140,255)",
+        btn: "0 0 5px #FF00FF, 0 0 25px #FF00FF, 0 0 50px #FF00FF",
         "light-100":
           "0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184, 184, 184, 0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)",
         "light-200": "10px 10px 20px 0px rgba(218, 213, 213, 0.10)",
@@ -57,26 +57,8 @@ module.exports = {
         "dark-100": "0px 2px 10px 0px rgba(46, 52, 56, 0.10)",
         "dark-200": "2px 0px 20px 0px rgba(39, 36, 36, 0.04)",
       },
-      backgroundImage: {
-        "auth-dark": "url('/assets/images/auth-dark.png')",
-        "auth-light": "url('/assets/images/auth-light.png')",
-      },
       screens: {
         xs: "420px",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

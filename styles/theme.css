@@ -4,7 +4,7 @@
 
 @layer utilities {
   .shadow__btn {
-    @apply rounded border-none bg-blue-500 px-5 py-2 text-lg font-bold uppercase tracking-wide text-white transition duration-500 hover:shadow-btn;
+    @apply rounded border-none bg-purple-500 px-4 py-2 text-lg font-bold uppercase tracking-wide text-white transition duration-500 hover:shadow-btn;
   }
   .home-heading {
     @apply h1-bold text-center md:text-start lg:text-6xl lg:font-medium xl:text-7xl xl:font-bold;

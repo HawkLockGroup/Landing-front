@@ -30,7 +30,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     handleThemeChange();
   }, [mode]);
-  console.log("mode", mode)
+  console.log("mode", mode);
 
   return (
     <ThemeContext.Provider value={{ mode, setMode }}>

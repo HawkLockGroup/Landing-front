@@ -3,9 +3,11 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { useTheme } from "@/context/ThemeProvider";
 
 const Animation = () => {
   const [init, setInit] = useState(false);
+  const { mode } = useTheme();
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -13,7 +15,7 @@ const Animation = () => {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, [mode]);
 
   const particlesLoaded = (container: Container) => {
     console.log(container);
@@ -23,7 +25,7 @@ const Animation = () => {
     () => ({
       background: {
         color: {
-          value: "#0d47a1",
+          value: `${mode === "light" ? "#fcf8fc" : "#343a40"}`,
         },
       },
       fpsLimit: 50,
@@ -51,23 +53,18 @@ const Animation = () => {
       },
       particles: {
         color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
+          value: `${mode === "light" ? "#d7c9d9" : "#7d767f"}`, // Particle color for contract theme
         },
         move: {
           direction: "none",
           enable: true,
           outModes: {
-            default: "bounce",
+            default: "out",
+            top: "bounce",
+            bottom: "bounce",
           },
           random: false,
-          speed: 1,
+          speed: 1.6,
           straight: false,
         },
         number: {
@@ -75,21 +72,21 @@ const Animation = () => {
             enable: true,
             area: 800,
           },
-          value: 80,
+          value: 65,
         },
         opacity: {
-          value: 0.5,
+          value: 0.7, // Adjust opacity to your preference
         },
         shape: {
-          type: "circle",
+          type: "edge", // You can experiment with other shapes like "triangle" or "edge" based on your preference
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 4, max: 20 },
         },
       },
       detectRetina: true,
     }),
-    []
+    [mode]
   );
 
   if (init) {

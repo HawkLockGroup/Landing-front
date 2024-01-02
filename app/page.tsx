@@ -1,12 +1,13 @@
+// <UserButton /> allows users to manage their account information and log out, completing the full authentication circle.
+"use client";
+
 import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import Features from "@/components/sections/features/Features";
 import Footer from "@/components/sections/footer/Footer";
 import Home from "@/components/sections/home/Home";
 import Animation from "@/components/shared/Animation";
 import Navbar from "@/components/shared/navbar/Navbar";
-import React from "react";
-
-function layout({ children }: { children: React.ReactNode }) {
+export default function Page() {
   return (
     <div className="relative">
       {/* animation background */}
@@ -29,5 +30,3 @@ function layout({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-export default layout;
