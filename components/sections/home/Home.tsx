@@ -34,7 +34,7 @@ function Home() {
       className="relative w-full p-4 text-dark-100 transition delay-100 duration-700  hover:scale-103"
     >
       {/* gradient bg */}
-      <div className="absolute inset-0 rounded-2xl border-2  border-[#d446e0] bg-gradient-to-t from-[#d446e0] to-[#ffffff] opacity-90 dark:from-[#d446e0] dark:to-[#080B18]"></div>
+      <div className="absolute inset-0 rounded-2xl border-2  border-[#6b1e72] bg-gradient-to-t from-[#6b1e72] to-[#ffffff] opacity-90 dark:from-[#6b1e72] dark:to-[#080B18]"></div>
 
       <div className="relative flex  flex-col md:grid md:grid-cols-5">
         {/* heading & paragraph */}

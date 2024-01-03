@@ -1,4 +1,4 @@
-import { SidebarLink, HowItWorks } from "@/types";
+import { SidebarLink, HowItWorks, Features } from "@/types";
 
 export const sidebarLinks: SidebarLink[] = [
   {
@@ -30,28 +30,52 @@ export const sidebarLinks: SidebarLink[] = [
 
 export const howItWorks: HowItWorks[] = [
   {
+    position: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    },
     heading: "Proposal Agreement",
     paragraph:
       "Alice lists her vintage watch on HawkLock, and Bob wants to buy it. They quickly settle on a price and choose Ether for payment. A secure escrow is set up, marking the start of their safe trade journey.",
   },
   {
+    position: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 24,
+    },
     heading: "Arbiter Engagement",
     paragraph:
       "Together, Alice and Bob pick Charlie, a trusted third party, to oversee the deal. Bob then locks the payment in escrow, signaling to Charlie that the transaction is ready to proceed with his oversight.",
   },
   {
+    position: {
+      top: 0,
+      right: 24,
+      bottom: 0,
+      left: 0,
+    },
     heading: "Seamless Transaction",
     paragraph:
       "Once Alice sends the watch, Bob checks and loves it, confirming its arrival to Charlie. This smooth step ensures everyone's on the same page, with HawkLock making sure things go as planned.",
   },
   {
+    position: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    },
     heading: "Fulfillment And Completion",
     paragraph:
       "Charlie gives the nod, the escrow releases the payment to Alice, and the deal is done. Alice is happy with her secure payment, and Bob enjoys his new vintage watch – a perfect trade finish on HawkLock.",
   },
 ];
 
-export const features: HowItWorks[] = [
+export const features: Features[] = [
   {
     heading: "Robust Security",
     paragraph:
