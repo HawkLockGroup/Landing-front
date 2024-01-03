@@ -25,7 +25,7 @@ const Animation = () => {
     () => ({
       background: {
         color: {
-          value: `${mode === "light" ? "#fcf8fc" : "#343a40"}`,
+          value: `${mode === "light" ? "#fcf8fc" : "#080B18"}`,
         },
       },
       fpsLimit: 50,

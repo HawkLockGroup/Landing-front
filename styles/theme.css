@@ -4,10 +4,10 @@
 
 @layer utilities {
   .shadow__btn {
-    @apply rounded border-none bg-purple-500 px-4 py-2 text-lg font-bold uppercase tracking-wide text-white transition duration-500 hover:shadow-btn;
+    @apply rounded-full border-none bg-[#fc38ff] px-4 py-4 text-lg font-bold  tracking-wide text-black transition duration-500 shadow-btn hover:opacity-80 hover:scale-95;
   }
   .home-heading {
-    @apply h1-bold text-center md:text-start lg:text-6xl lg:font-medium xl:text-7xl xl:font-bold;
+    @apply text-[45px] xl:leading-[65px] leading-[42px]  tracking-tighter text-center md:text-start xl:text-[80px]  font-semibold dark:text-[#EBF7FD];
   }
 
   .light-border {

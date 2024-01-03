@@ -38,7 +38,6 @@ export function TextMotion({ text }: TextMotionProps) {
   };
   return (
     <motion.div
-      className="text-red-500"
       style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
       variants={container}
       initial="hidden"
@@ -46,7 +45,6 @@ export function TextMotion({ text }: TextMotionProps) {
     >
       {words.map((word, index) => (
         <motion.span
-          className="text-red-400"
           variants={child}
           style={{ marginRight: "5px" }}
           key={index}

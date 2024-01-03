@@ -9,6 +9,8 @@ import {
 } from "@/utils/motion";
 import { useMediaQuery } from "@react-hook/media-query";
 import { useEffect, useState } from "react";
+import { BsArrowRightCircleFill } from "react-icons/bs";
+import { BiShieldPlus } from "react-icons/bi";
 
 function Home() {
   const isMediumScreen = useMediaQuery("(max-width: 768px)");
@@ -29,16 +31,16 @@ function Home() {
       initial="hidden"
       animate="visible"
       id="home"
-      className="text-dark100_light900 w-full rounded-2xl border-2 border-[#FF00FF] bg-light-800  bg-opacity-[0.8] p-4 transition delay-100 duration-700  hover:scale-103 dark:bg-dark-400 dark:bg-opacity-[0.8]"
+      className="text-dark100_light900 w-full rounded-2xl border-2 border-[#FF00FF] bg-light-800 bg-opacity-[0.8]  p-4 transition delay-100 duration-700 hover:scale-103  dark:bg-[#080B18] dark:bg-opacity-[0.82]"
     >
       <div className="flex flex-col  md:grid md:grid-cols-5">
         {/* heading & paragraph */}
         <motion.div
           variants={isMediumScreen ? slideInFromTop(0.5) : slideInFromLeft(0.7)}
-          className="gap-4 md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-8 2xl:justify-start 2xl:gap-12 2xl:pt-72"
+          className=" space-y-2 md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-6 2xl:justify-start 2xl:gap-12 2xl:pt-52"
         >
           {/* main head */}
-          <h1 className="home-heading">
+          <h1 className="home-heading ">
             <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-start text-transparent">
               {" "}
               HAWKLOCK
@@ -47,7 +49,7 @@ function Home() {
           </h1>
 
           {/* main paragraph */}
-          <p className="text-center text-xl md:text-start">
+          <p className="text-center text-xl dark:text-[#95A1B4] md:text-start">
             Embark on a journey of unbreakable security and swift decentralized
             trades with HAWKLOCK.
           </p>
@@ -56,9 +58,12 @@ function Home() {
               <a
                 href="https://www.google.com/"
                 target="_blank"
-                className="text-lg font-bold"
+                className="flex flex-row justify-center gap-2 "
               >
-                Discover the Future
+                <BiShieldPlus size="28px" />
+
+                <span>discover</span>
+                <BsArrowRightCircleFill size="28px" />
               </a>
             </button>
           </div>
