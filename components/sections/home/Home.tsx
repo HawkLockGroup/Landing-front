@@ -31,29 +31,42 @@ function Home() {
       initial="hidden"
       animate="visible"
       id="home"
-      className="text-dark100_light900 w-full rounded-2xl border-2 border-[#FF00FF] bg-light-800 bg-opacity-[0.8]  p-4 transition delay-100 duration-700 hover:scale-103  dark:bg-[#080B18] dark:bg-opacity-[0.82]"
+      className="relative w-full p-4 text-dark-100 transition delay-100 duration-700  hover:scale-103"
     >
-      <div className="flex flex-col  md:grid md:grid-cols-5">
+      {/* gradient bg */}
+      <div className="absolute inset-0 rounded-2xl border-2  border-[#d446e0] bg-gradient-to-t from-[#d446e0] to-[#ffffff] opacity-90 dark:from-[#d446e0] dark:to-[#080B18]"></div>
+
+      <div className="relative flex  flex-col md:grid md:grid-cols-5">
         {/* heading & paragraph */}
-        <motion.div
-          variants={isMediumScreen ? slideInFromTop(0.5) : slideInFromLeft(0.7)}
-          className=" space-y-2 md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-6 2xl:justify-start 2xl:gap-12 2xl:pt-52"
-        >
+        <div className=" space-y-2 md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-6 2xl:justify-start 2xl:gap-12 2xl:pt-52">
           {/* main head */}
-          <h1 className="home-heading ">
+          <motion.h1
+            variants={
+              isMediumScreen ? slideInFromTop(0.7) : slideInFromLeft(0.5)
+            }
+            className="home-heading "
+          >
             <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-start text-transparent">
               {" "}
               HAWKLOCK
             </span>{" "}
             Pioneering the Escrow Revolution
-          </h1>
+          </motion.h1>
 
           {/* main paragraph */}
-          <p className="text-center text-xl dark:text-[#95A1B4] md:text-start">
+          <motion.p
+            variants={
+              isMediumScreen ? slideInFromTop(0.5) : slideInFromLeft(0.7)
+            }
+            className="text-center text-xl dark:text-[#95A1B4] md:text-start"
+          >
             Embark on a journey of unbreakable security and swift decentralized
             trades with HAWKLOCK.
-          </p>
-          <div className="hidden w-full justify-start md:flex">
+          </motion.p>
+          <motion.div
+            variants={slideInFromLeft(0.8)}
+            className="hidden w-full justify-start md:flex"
+          >
             <button className="shadow__btn">
               <a
                 href="https://www.google.com/"
@@ -66,8 +79,8 @@ function Home() {
                 <BsArrowRightCircleFill size="28px" />
               </a>
             </button>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* svg */}
         <motion.div
@@ -85,17 +98,23 @@ function Home() {
           />
         </motion.div>
       </div>
-      <div className="flex w-full justify-center md:hidden">
+      <motion.div
+        variants={slideInFromBottom(0.8)}
+        className="relative flex w-full justify-center md:hidden"
+      >
         <button className="shadow__btn">
           <a
             href="https://www.google.com/"
             target="_blank"
-            className="text-lg font-bold"
+            className="flex flex-row justify-center gap-2 "
           >
-            Discover the Future
+            <BiShieldPlus size="28px" />
+
+            <span>discover</span>
+            <BsArrowRightCircleFill size="28px" />
           </a>
         </button>
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

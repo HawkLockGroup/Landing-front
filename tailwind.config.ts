@@ -49,7 +49,7 @@ module.exports = {
         spaceGrotesk: ["var(--font-spaceGrotesk)"],
       },
       boxShadow: {
-        btn: "0 0 5px #FF00FF, 0 0 25px #FF00FF, 0 0 50px #FF00FF",
+        btn: "0 0 5px #FF00FF, 0 0 15px #FF00FF, 0 0 25px #FF00FF",
         "light-100":
           "0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184, 184, 184, 0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)",
         "light-200": "10px 10px 20px 0px rgba(218, 213, 213, 0.10)",
