@@ -24,11 +24,8 @@ FROM node:18
 # Set the working directory
 WORKDIR /app
 
-# Copy the built files from the builder stage
-COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
+# Copy the necessary files from the builder stage
+COPY --from=builder /app ./
 
 # Expose the port the app runs on
 EXPOSE 3000
