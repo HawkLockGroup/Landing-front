@@ -31,6 +31,11 @@ const NavContent = () => {
               "activeSection",
               JSON.stringify(newActiveSection)
             );
+            if (newActiveSection === "howItWorks") {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "auto";
+            }
           }
           break;
         }

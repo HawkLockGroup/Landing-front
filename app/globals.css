@@ -4,8 +4,8 @@
 
 @import url("../styles/theme.css");
 
-body {
-  /* font-family: "Inter", sans-serif; */
+.scrollable {
+  overflow-y: auto;
 }
 
 @layer utilities {
