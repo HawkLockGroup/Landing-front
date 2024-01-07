@@ -86,7 +86,7 @@ function HowItWorks() {
       ) {
         const now = performance.now();
         // debounce time is set to 1200 for scroll smooth in items
-        if (now - lastScrollTime.current > 1200) {
+        if (now - lastScrollTime.current > 5) {
           if (
             touchY > sectionRect.top &&
             selectedItem < howItWorks.length - 1
