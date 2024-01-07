@@ -95,7 +95,7 @@ function HowItWorks() {
     <section
       id="howItWorks"
       ref={sectionRef}
-      className="relative grid w-full grid-cols-7 overflow-hidden scroll-smooth sm:flex"
+      className="relative grid w-full grid-cols-7 overflow-hidden scroll-smooth text-dark-100 sm:flex"
       onWheel={handleWheelScroll}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -113,23 +113,30 @@ function HowItWorks() {
           transformOrigin: "center",
         }}
       >
-        <div className="relative flex flex-col items-center gap-4 sm:col-span-3">
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-[#6b1e72] to-[#ffffff] opacity-90 dark:from-[#6b1e72] dark:to-[#080B18]"></div>
-          <h3 className="relative">{howItWorks[nextItem]?.heading}</h3>
-          <p className="relative">{howItWorks[nextItem]?.paragraph}</p>
+        <div className="relative flex flex-col items-center gap-2 p-2 sm:col-span-3 sm:gap-4 sm:px-4 lg:px-8">
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#6b1e72] to-[#ffffff] opacity-90 dark:from-[#6b1e72] dark:to-[#080B18]"></div>
+
+          <h2 className="relative w-full text-center text-[28px] font-semibold tracking-tighter dark:text-[#EBF7FD] sm:text-start xl:text-[35px]">
+            {howItWorks[nextItem]?.heading}
+          </h2>
+
+          <p className="relative text-center text-xl dark:text-[#95A1B4] sm:text-start">
+            {howItWorks[nextItem]?.paragraph}
+          </p>
         </div>
 
         <div className="z-10 hidden  -translate-x-1/2 items-center justify-center gap-2 sm:col-span-1 sm:mx-auto sm:flex sm:flex-col">
           {paginationBullets}
         </div>
-
-        <Image
-          src="/assets/images/site-logo.png"
-          alt="howklock"
-          width={200}
-          height={200}
-          className="relative sm:col-span-3 sm:m-auto"
-        />
+        <div className="mx-auto h-full w-full  sm:col-span-3">
+          <Image
+            src="/assets/images/site-logo.png"
+            alt="howklock"
+            width={200}
+            height={200}
+            className="relative mx-auto"
+          />
+        </div>
       </div>
 
       <div className="col-span-1 flex -translate-x-1/2 flex-col items-end justify-center gap-2 sm:hidden">

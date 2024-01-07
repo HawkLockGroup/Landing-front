@@ -44,9 +44,9 @@ function Home() {
             variants={
               isMediumScreen ? slideInFromTop(0.7) : slideInFromLeft(0.5)
             }
-            className="home-heading"
+            className="home-heading "
           >
-            <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-start text-transparent">
+            <span className="bg-gradient-to-r from-[#00ff0d] to-[#ea00ff] bg-clip-text text-start text-transparent">
               {" "}
               HAWKLOCK
             </span>{" "}

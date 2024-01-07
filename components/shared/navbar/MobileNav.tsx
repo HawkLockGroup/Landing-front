@@ -99,7 +99,7 @@ function MobileNav() {
           src="/assets/icons/hamburger.svg"
           width={36}
           height={36}
-          className="invert-colors cursor-pointer lg:hidden"
+          className="active-theme-menu cursor-pointer lg:hidden"
         />
       </SheetTrigger>
       <SheetContent
@@ -114,7 +114,9 @@ function MobileNav() {
             alt="HawkLock"
           />
           <p className="h2-bold text-dark100_light900 font-spaceGrotesk">
-            <span className="text-primary-500">HawkLock</span>
+            <span className="bg-gradient-to-r from-[#00ff0d] to-[#00ff0d] bg-clip-text text-start text-transparent">
+              HAWKLOCK
+            </span>{" "}
           </p>
         </Link>
         <div>
@@ -122,11 +124,11 @@ function MobileNav() {
             <NavContent />
           </SheetClose>
           <SheetClose asChild>
-            <Button className=" btn-secondary primary-gradient min-h-[41px] w-full justify-center rounded-lg px-4 py-3 text-light-900 shadow-none mt-24 bg-transparent">
+            <Button className=" btn-secondary primary-gradient mt-24 min-h-[41px] w-full justify-center rounded-lg bg-transparent px-4 py-3 text-light-900 shadow-none">
               <a
                 href="https://www.google.com/"
                 target="_blank"
-                className="font-bold text-lg"
+                className="text-lg font-bold"
               >
                 Discover the Future
               </a>

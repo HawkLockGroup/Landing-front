@@ -30,7 +30,7 @@ function Navbar() {
     <>
       {/* {!showNavbar && <Banner />} */}
       {/* removed clsses: shadow-light-300 */}
-      <nav className="background-light900_dark200 fixed z-50 flex w-full flex-row items-center justify-between gap-5 bg-light-900 px-2 py-1 opacity-100 transition-all duration-500 sm:px-12 lg:justify-normal">
+      <header className="background-light900_dark200 fixed z-50 flex w-full flex-row items-center justify-between gap-5 bg-light-900 px-4 py-1 opacity-100 transition-all duration-500 sm:px-12 lg:justify-normal lg:px-20">
         {/* name&logo */}
         <Link href="/" className="flex items-center gap-1">
           <Image
@@ -40,20 +40,22 @@ function Navbar() {
             alt="HawkLock Image"
           />
           <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden">
-            <span className="text-primary-500">HawkLock</span>
+            <span className="bg-gradient-to-r from-[#00ff0d] to-[#00ff0d] bg-clip-text text-start text-transparent">
+              HAWKLOCK
+            </span>
           </p>
         </Link>
 
         {/* desktop nv */}
         <DesktopNavRenderClient />
-        <div className="flex-between gap-5">
+        <div className="flex items-center justify-between gap-5">
           {/* theme btn */}
           <Theme />
 
           {/* mobile nav */}
           <MobileNav />
         </div>
-      </nav>
+      </header>
     </>
   );
 }

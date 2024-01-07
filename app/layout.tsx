@@ -32,7 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      //  className={`${inter.variable} ${spaceGrotesk.variable}`}
+        className="custom-scrollbar"
+        //  className={`${inter.variable} ${spaceGrotesk.variable}`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
