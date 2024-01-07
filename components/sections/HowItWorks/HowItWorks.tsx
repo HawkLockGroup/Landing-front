@@ -70,21 +70,29 @@ function HowItWorks() {
   );
 
   // mobile touch
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchStart = () => {
+    document.addEventListener("touchmove", handleTouchMove);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
     if (sectionRef.current) {
       const touchY = e.touches[0].clientY;
       const sectionRect = sectionRef.current.getBoundingClientRect();
 
-      if (sectionVisible) {
+      if (
+        touchY > sectionRect.top &&
+        touchY < sectionRect.bottom &&
+        sectionVisible
+      ) {
         const now = performance.now();
-        // debounce time is set to 500 for scroll smooth in items
+        // debounce time is set to 1200 for scroll smooth in items
         if (now - lastScrollTime.current > 1200) {
           if (
-            touchY > sectionRect.bottom &&
+            touchY > sectionRect.top &&
             selectedItem < howItWorks.length - 1
           ) {
             setSelectedItem((prev) => prev + 1);
-          } else if (touchY < sectionRect.top && selectedItem > 0) {
+          } else if (touchY < sectionRect.bottom && selectedItem > 0) {
             setSelectedItem((prev) => prev - 1);
           }
 
@@ -93,6 +101,20 @@ function HowItWorks() {
       }
     }
   };
+
+  const handleTouchEnd = () => {
+    document.removeEventListener("touchmove", handleTouchMove);
+  };
+
+  useEffect(() => {
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [sectionRef, sectionVisible, selectedItem]);
   // mobile touch
 
   return (
@@ -110,10 +132,10 @@ function HowItWorks() {
       onTouchMoveCapture={() => {
         document.body.style.overflow = "hidden";
       }}
-      onTouchMove={handleTouchMove}
       onTouchEnd={() => {
         document.body.style.overflow = "auto";
       }}
+      // onTouchMove={handleTouchMove}
     >
       <div
         className="relative col-span-6 flex flex-col justify-between overflow-hidden transition-transform duration-1000 sm:grid sm:grid-cols-7 sm:gap-4"
