@@ -69,12 +69,42 @@ function HowItWorks() {
     )
   );
 
+  // mobile touch
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (sectionRef.current) {
+      lastScrollTime.current = performance.now();
+    }
+  };
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (sectionRef.current && sectionVisible) {
+      const now = performance.now();
+      if (now - lastScrollTime.current > 1200) {
+        const deltaY = e.touches[0].clientY - lastScrollTime.current;
+        if (deltaY > 0 && selectedItem < howItWorks.length - 1) {
+          setSelectedItem((prev) => prev + 1);
+        } else if (deltaY < 0 && selectedItem > 0) {
+          setSelectedItem((prev) => prev - 1);
+        }
+        lastScrollTime.current = now;
+      }
+    }
+  };
+  // mobile touch
+
   return (
     <section
       id="howItWorks"
       ref={sectionRef}
-      className="relative grid w-full grid-cols-7 overflow-hidden sm:flex"
+      className="relative grid w-full grid-cols-7 overflow-hidden scroll-smooth sm:flex"
       onWheel={handleWheelScroll}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onPointerEnter={() => {
+        document.body.style.overflow = "hidden";
+      }}
+      onPointerLeave={() => {
+        document.body.style.overflow = "auto";
+      }}
     >
       <div
         className="relative col-span-6 flex flex-col justify-between overflow-hidden transition-transform duration-1000 sm:grid sm:grid-cols-7 sm:gap-4"
