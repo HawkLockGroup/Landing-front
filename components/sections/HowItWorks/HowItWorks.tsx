@@ -70,7 +70,29 @@ function HowItWorks() {
   );
 
   // mobile touch
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (sectionRef.current) {
+      const touchY = e.touches[0].clientY;
+      const sectionRect = sectionRef.current.getBoundingClientRect();
 
+      if (sectionVisible) {
+        const now = performance.now();
+        // debounce time is set to 500 for scroll smooth in items
+        if (now - lastScrollTime.current > 1200) {
+          if (
+            touchY > sectionRect.bottom &&
+            selectedItem < howItWorks.length - 1
+          ) {
+            setSelectedItem((prev) => prev + 1);
+          } else if (touchY < sectionRect.top && selectedItem > 0) {
+            setSelectedItem((prev) => prev - 1);
+          }
+
+          lastScrollTime.current = now;
+        }
+      }
+    }
+  };
   // mobile touch
 
   return (
@@ -88,6 +110,7 @@ function HowItWorks() {
       onTouchMoveCapture={() => {
         document.body.style.overflow = "hidden";
       }}
+      onTouchMove={handleTouchMove}
       onTouchEnd={() => {
         document.body.style.overflow = "auto";
       }}
