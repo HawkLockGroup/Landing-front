@@ -7,6 +7,10 @@
 .scrollable {
   overflow-y: auto;
 }
+.zero-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #ffffff;
@@ -16,7 +20,6 @@
   height: 3px;
   border-radius: 2px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 50px;

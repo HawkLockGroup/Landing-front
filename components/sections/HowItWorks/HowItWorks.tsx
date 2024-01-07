@@ -99,7 +99,7 @@ function HowItWorks() {
     <section
       id="howItWorks"
       ref={sectionRef}
-      className="relative grid w-full grid-cols-7 overflow-hidden scroll-smooth text-dark-100 sm:flex"
+      className="zero-scrollbar relative grid w-full grid-cols-7 overflow-hidden scroll-smooth text-dark-100 sm:flex"
       onWheel={handleWheelScroll}
       onPointerEnter={() => {
         document.body.style.overflow = "hidden";
