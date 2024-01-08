@@ -48,7 +48,7 @@ function Home() {
           >
             <span className="bg-gradient-to-r from-[#00ff0d] to-[#ea00ff] bg-clip-text text-start text-transparent">
               {" "}
-              HAWKLOCK
+              SEALSED
             </span>{" "}
             Pioneering the Escrow Revolution
           </motion.h1>
@@ -61,7 +61,7 @@ function Home() {
             className="text-center text-xl dark:text-[#95A1B4] md:text-start"
           >
             Embark on a journey of unbreakable security and swift decentralized
-            trades with HAWKLOCK.
+            trades with SEALSED.
           </motion.p>
           <motion.div
             variants={slideInFromLeft(0.8)}
@@ -89,6 +89,14 @@ function Home() {
             isMediumScreen ? slideInFromBottom(0.5) : slideInFromRight(0.5)
           }
         >
+          {" "}
+          <Image
+            src="/test1.svg"
+            alt="howklock"
+            width={600}
+            height={600}
+            className="mx-auto w-full"
+          />
           <Image
             src="/animation.svg"
             alt="howklock"

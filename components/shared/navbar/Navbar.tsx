@@ -37,11 +37,11 @@ function Navbar() {
             src="/assets/images/site-logo.png"
             width={23}
             height={23}
-            alt="HawkLock Image"
+            alt="SEALSED Image"
           />
           <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden">
             <span className="bg-gradient-to-r from-[#00ff0d] to-[#00ff0d] bg-clip-text text-start text-transparent">
-              HAWKLOCK
+              SEALSED
             </span>
           </p>
         </Link>

@@ -111,11 +111,11 @@ function MobileNav() {
             src="/assets/images/site-logo.png"
             width={23}
             height={23}
-            alt="HawkLock"
+            alt="SEALSED"
           />
           <p className="h2-bold text-dark100_light900 font-spaceGrotesk">
             <span className="bg-gradient-to-r from-[#00ff0d] to-[#00ff0d] bg-clip-text text-start text-transparent">
-              HAWKLOCK
+              SEALSED
             </span>{" "}
           </p>
         </Link>

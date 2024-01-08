@@ -38,7 +38,7 @@ export const howItWorks: HowItWorks[] = [
     },
     heading: "Proposal Agreement",
     paragraph:
-      "Alice lists her vintage watch on HawkLock, and Bob wants to buy it. They quickly settle on a price and choose Ether for payment. A secure escrow is set up, marking the start of their safe trade journey.",
+      "Alice lists her vintage watch on SEALSED, and Bob wants to buy it. They quickly settle on a price and choose Ether for payment. A secure escrow is set up, marking the start of their safe trade journey.",
   },
   {
     position: {
@@ -60,7 +60,7 @@ export const howItWorks: HowItWorks[] = [
     },
     heading: "Seamless Transaction",
     paragraph:
-      "Once Alice sends the watch, Bob checks and loves it, confirming its arrival to Charlie. This smooth step ensures everyone's on the same page, with HawkLock making sure things go as planned.",
+      "Once Alice sends the watch, Bob checks and loves it, confirming its arrival to Charlie. This smooth step ensures everyone's on the same page, with SEALSED making sure things go as planned.",
   },
   {
     position: {
@@ -71,7 +71,7 @@ export const howItWorks: HowItWorks[] = [
     },
     heading: "Fulfillment And Completion",
     paragraph:
-      "Charlie gives the nod, the escrow releases the payment to Alice, and the deal is done. Alice is happy with her secure payment, and Bob enjoys his new vintage watch – a perfect trade finish on HawkLock.",
+      "Charlie gives the nod, the escrow releases the payment to Alice, and the deal is done. Alice is happy with her secure payment, and Bob enjoys his new vintage watch – a perfect trade finish on SEALSED.",
   },
 ];
 
@@ -79,21 +79,21 @@ export const features: Features[] = [
   {
     heading: "Robust Security",
     paragraph:
-      "HAWKLOCK prioritizes your asset safety above all. Leveraging state-of-the-art security protocols alongside robust smart contract technology, we ensure each transaction is not only secure but also transparently conducted, providing you with a fortress of trust and reliability around the clock.",
+      "SEALSED prioritizes your asset safety above all. Leveraging state-of-the-art security protocols alongside robust smart contract technology, we ensure each transaction is not only secure but also transparently conducted, providing you with a fortress of trust and reliability around the clock.",
   },
   {
     heading: "Efficient Trading",
     paragraph:
-      "Time is a valuable asset in trading, and HAWKLOCK respects this. Our platform is engineered for speed, facilitating rapid transactions without compromising clarity or accuracy. Step into a world where efficiency meets precision, ensuring your trading experience is both swift and seamless.",
+      "Time is a valuable asset in trading, and SEALSED respects this. Our platform is engineered for speed, facilitating rapid transactions without compromising clarity or accuracy. Step into a world where efficiency meets precision, ensuring your trading experience is both swift and seamless.",
   },
   {
     heading: "Integrity in Arbitration",
     paragraph:
-      "At HAWKLOCK, integrity is the cornerstone of our community-driven arbitration process. Empower your transactions by choosing from a cadre of esteemed arbiters, committed to fairness and balance. Our democratic governance model is designed to reflect the collective voice of our users, fostering a transparent and equitable trading environment.",
+      "At SEALSED, integrity is the cornerstone of our community-driven arbitration process. Empower your transactions by choosing from a cadre of esteemed arbiters, committed to fairness and balance. Our democratic governance model is designed to reflect the collective voice of our users, fostering a transparent and equitable trading environment.",
   },
   {
     heading: "Reliable Asset Transfers",
     paragraph:
-      "Experience the convenience of instant asset transfers with HAWKLOCK. Our system is tailored for prompt and secure exchanges, minimizing wait times and maximizing trading efficacy. The HAWKLOCK Token (HWT) anchors our ecosystem, offering a dependable and swift medium for all your transactional needs, epitomizing our commitment to a user-centric, secure trading platform.",
+      "Experience the convenience of instant asset transfers with SEALSED. Our system is tailored for prompt and secure exchanges, minimizing wait times and maximizing trading efficacy. The SEALSED Token (HWT) anchors our ecosystem, offering a dependable and swift medium for all your transactional needs, epitomizing our commitment to a user-centric, secure trading platform.",
   },
 ];

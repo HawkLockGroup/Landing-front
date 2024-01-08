@@ -16,9 +16,9 @@ import { ThemeProvider } from "@/context/ThemeProvider";
 // });
 
 export const metadata: Metadata = {
-  title: "HAWKLOCK: Pioneering the Escrow Revolution",
+  title: "SEALSED: Pioneering the Escrow Revolution",
   description:
-    "Embark on a journey of unbreakable security and swift decentralized trades with HAWKLOCK",
+    "Embark on a journey of unbreakable security and swift decentralized trades with SEALSED",
   icons: {
     icon: "/assets/images/site-logo.png",
   },

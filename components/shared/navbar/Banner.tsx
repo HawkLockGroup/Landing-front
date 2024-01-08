@@ -20,7 +20,7 @@
 //         className="hidden hover:underline lg:block"
 //         target="_blank"
 //         rel="noopener noreferrer"
-//         href="https://simulate.hawklock.co/"
+//         href="https://simulate.SEALSED.co/"
 //       >
 //         Access the simulator
 //       </a>
