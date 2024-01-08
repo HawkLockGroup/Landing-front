@@ -15,11 +15,9 @@ export default function Page() {
         <Animation />
       </div>
       {/* navbar */}
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
       {/* sections <main> */}
-      <main className="relative z-10 mx-auto flex min-h-screen w-full flex-1 flex-col gap-20 px-6 pt-16 lg:px-20">
+      <main className="relative z-10 mx-auto flex min-h-screen w-full flex-1 flex-col gap-20 p-6 pt-24 lg:px-20">
         <Home />
         <HowItWorks />
         <Features />

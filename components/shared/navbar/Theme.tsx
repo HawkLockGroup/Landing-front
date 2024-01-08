@@ -13,7 +13,8 @@ function Theme() {
       newMode = "light";
     }
     setMode(newMode);
-    if (newMode && newMode !== "system") {
+    // if (newMode && newMode !== "system") {
+    if (newMode) {
       localStorage.theme = newMode;
     } else {
       // Reset to system theme (remove from local storage)

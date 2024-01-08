@@ -11,13 +11,14 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   // mode: light or dark
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState("dark");
   const handleThemeChange = () => {
     if (
       localStorage.theme === "dark" ||
       // if user operating system prefers dark mode:
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-schema: dark").matches)
+      // (!("theme" in localStorage) &&
+      //   window.matchMedia("(prefers-color-schema: dark").matches)
+      !("theme" in localStorage)
     ) {
       setMode("dark");
       document.documentElement.classList.add("dark");

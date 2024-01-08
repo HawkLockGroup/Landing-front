@@ -29,8 +29,7 @@ function Navbar() {
   return (
     <>
       {/* {!showNavbar && <Banner />} */}
-      {/* removed clsses: shadow-light-300 */}
-      <header className="background-light900_dark200 fixed z-50 flex w-full flex-row items-center justify-between gap-5 bg-light-900 px-4 py-1 opacity-100 transition-all duration-500 sm:px-12 lg:justify-normal lg:px-20">
+      <header className="fixed inset-x-6 z-50 mx-auto my-0 flex h-[72px] flex-row items-center justify-between gap-5 rounded-lg border-2 border-[#6b1e72]  bg-[#fcf8fc] px-4 py-1 opacity-95  transition-all duration-500 dark:bg-[#080B18] sm:px-12 lg:inset-x-20 lg:justify-center lg:px-20">
         {/* name&logo */}
         <Link href="/" className="flex items-center gap-1">
           <Image

@@ -38,6 +38,7 @@ function Home() {
 
       <div className="relative flex  flex-col md:grid md:grid-cols-5">
         {/* heading & paragraph */}
+
         <div className=" space-y-2 md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-6 2xl:justify-start 2xl:gap-12 2xl:pt-52">
           {/* main head */}
           <motion.h1
@@ -89,14 +90,6 @@ function Home() {
             isMediumScreen ? slideInFromBottom(0.5) : slideInFromRight(0.5)
           }
         >
-          {" "}
-          <Image
-            src="/test1.svg"
-            alt="howklock"
-            width={600}
-            height={600}
-            className="mx-auto w-full"
-          />
           <Image
             src="/animation.svg"
             alt="howklock"

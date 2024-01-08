@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @import url("../styles/theme.css");
-
+.active_section {
+  background: linear-gradient(to right, #bbf1be, #00ff0d);
+  border-radius: 10px;
+  color: #00ff0d;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 140%;
+  /* @apply invert dark:invert-0; */
+}
 .scrollable {
   overflow-y: auto;
 }
@@ -13,7 +21,7 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #6b1e72;
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 3px;
@@ -56,12 +64,15 @@
 }
 
 .active-theme-menu {
-  filter: invert(58%) sepia(88%) saturate(333%) hue-rotate(255deg)
-    brightness(104%) contrast(66%) !important;
+  filter: invert(58%) sepia(88%) saturate(500%) hue-rotate(255deg)
+    brightness(94%) contrast(66%) !important;
 }
 .active-theme {
   filter: invert(53%) sepia(98%) saturate(333%) hue-rotate(80deg)
     brightness(114%) contrast(116%) !important;
+}
+.mobile {
+  fill: #ff0000; /* Replace with your light theme color */
 }
 /* Markdown Start */
 .markdown a {
