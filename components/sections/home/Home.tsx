@@ -39,7 +39,7 @@ function Home() {
       <div className="relative flex  flex-col md:grid md:grid-cols-5">
         {/* heading & paragraph */}
 
-        <div className=" space-y-2 md:col-span-2 md:flex md:flex-col md:items-center md:justify-center md:gap-6 2xl:justify-start 2xl:gap-12 2xl:pt-52">
+        <div className=" space-y-2 md:col-span-2 md:flex md:flex-col md:items-center md:justify-start md:gap-6 md:pt-20 2xl:gap-12">
           {/* main head */}
           <motion.h1
             variants={
@@ -95,7 +95,7 @@ function Home() {
             alt="howklock"
             width={600}
             height={600}
-            className="mx-auto w-full"
+            className="mx-auto"
           />
         </motion.div>
       </div>
