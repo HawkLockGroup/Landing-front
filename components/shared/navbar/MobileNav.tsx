@@ -9,11 +9,10 @@ import {
 import { sidebarLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Events, scrollSpy, Link as ScrollLink } from "react-scroll";
 
 const NavContent = () => {
-  const [activeSection, setActiveSection] = useState<string | null>();
   useEffect(() => {
     Events.scrollEvent.register("begin", (to, element) => {
       console.log("begin", to, element);
