@@ -1,5 +1,4 @@
 import { features } from "@/constants";
-import Image from "next/image";
 
 function Features() {
   return (
@@ -16,13 +15,6 @@ function Features() {
           </div>
         ))}
       </div>{" "}
-      <Image
-        src="/test1.svg"
-        alt="howklock"
-        width={600}
-        height={600}
-        className="mx-auto w-full"
-      />
     </section>
   );
 }

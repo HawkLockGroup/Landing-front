@@ -5,8 +5,9 @@ import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import Features from "@/components/sections/features/Features";
 import Footer from "@/components/sections/footer/Footer";
 import Home from "@/components/sections/home/Home";
-import Animation from "@/components/shared/Animation";
+import Animation from "@/components/shared/animation_bg/Animation";
 import Navbar from "@/components/shared/navbar/Navbar";
+import Image from "next/image";
 export default function Page() {
   return (
     <div className="relative">
@@ -20,6 +21,13 @@ export default function Page() {
       <main className="relative z-10 mx-auto flex min-h-screen w-full flex-1 flex-col gap-20 p-6 pt-24 lg:px-20">
         <Home />
         <HowItWorks />
+        <Image
+          src="/test1.svg"
+          alt="howklock"
+          width={600}
+          height={600}
+          className="mx-auto w-full"
+        />
         <Features />
       </main>
       {/* footer */}

@@ -3,6 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import { Providers } from "./providers";
 
 // const inter = Inter({
 //   subsets: ["latin"],
@@ -35,7 +36,9 @@ export default function RootLayout({
         className="custom-scrollbar"
         //  className={`${inter.variable} ${spaceGrotesk.variable}`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Providers>{children}</Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
