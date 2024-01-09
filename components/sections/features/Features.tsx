@@ -1,21 +1,32 @@
-import { features } from "@/constants";
+import Image from "next/image";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 function Features() {
   return (
-    <section
-      id="features"
-      className="background-light800_dark400 text-dark100_light900 w-full rounded-2xl p-4 "
-    >
-      {/* <h1 className="home-heading">HOw it works</h1> */}
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map((item, index) => (
-          <div key={index} className="light-border p-6">
-            <div className="mb-4 text-xl font-bold">{item.heading}</div>
-            <p>{item.paragraph}</p>
-          </div>
-        ))}
-      </div>{" "}
-    </section>
+    <ParallaxProvider>
+      <Parallax translateY={["-100px", "500px"]}>
+        <section
+          id="features"
+          className="text-dark100_light900 relative flex h-[1020px] w-full flex-row items-center justify-around bg-green-500 p-40"
+        >
+          <Parallax translateX={["-20px", "100px"]}>
+            <div className="">move right</div>
+          </Parallax>
+          <Parallax rotateY={[0, 1000]}>
+            <Image
+              src="/test.svg"
+              alt="howklock"
+              width={600}
+              height={600}
+              className="mx-auto w-full"
+            />{" "}
+          </Parallax>{" "}
+          <Parallax translateX={["20px", "-100px"]}>
+            <div className="text-end">move left</div>
+          </Parallax>
+        </section>
+      </Parallax>
+    </ParallaxProvider>
   );
 }
 
